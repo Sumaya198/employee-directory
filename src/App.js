@@ -1,14 +1,18 @@
-import React from 'react';
-import './App.css';
+import React, { Component } from 'react';
+import Card from './Components/Table/Card';
+import Header from './Components/Header/Header';
+//import Search from './Components/Search/Search';
+
 
 function App() {
-  return (
-    <div className="App">
-     <h1>Employee Directory</h1>
-     <h3>Hello</h3>
 
-    </div>
-  );
+    return (
+        <>
+        <Header />
+       
+            <Card />
+        </>
+    )
+
 }
-
 export default App;

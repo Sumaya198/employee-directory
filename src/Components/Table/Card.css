@@ -1,0 +1,29 @@
+.card{
+    box-shadow: 0px 0.2px 6px 0.5px black;
+    margin: 20px;
+    height: 350px;
+    border-radius: 10px;
+}
+
+.upper-container{
+    height:100px;
+    background: linear-gradient(to left, #ec9e74, #ff56);
+}
+.image-container img{
+    background: white;
+    width: 120px;
+    height: 120px;
+    padding: 5px;
+    border-radius: 50%;
+    transform: translate(10px,45px);
+    
+}
+
+.card-body{
+    transform: translate(10px,45px);
+
+}
+
+.gender{
+    text-transform: capitalize;
+}
