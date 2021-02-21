@@ -9,6 +9,7 @@ class Table extends Component {
   state ={
       search: '', 
       employees: [],
+      filteredArray: []
     }
 
   
@@ -18,12 +19,7 @@ class Table extends Component {
   
 
   handleInputChange = event => {
-    const { name, value } = event.target;
-    this.setState(
-      {
-        [name]: value
-      }
-    );
+   this.setState({ searchTerm: event.target.value})
   }
  
   
@@ -69,6 +65,7 @@ class Table extends Component {
   
 // })
 //console.log('Searched:', searchEmployees)
+//let filteredArray = data.results.filter()
 
        let sortedEmployees = data.results.sort(compare)
         let employees = sortedEmployees.map((person) => {
@@ -77,22 +74,26 @@ class Table extends Component {
           
           return (
 
-            <table>
+            <table className="table table-striped table-hover">
               <thead>
                 <tr>
+                  <th>ID</th>
                   <th>Image</th>
                   <th>Name</th>
                   <th>Phone</th>
                   <th>Email</th>
+                  <th>Gender</th>
                   <th>Location</th>
                 </tr>
               </thead>
               <tbody>
                 <tr key={person.id.value}>
+                  <td>{person.id.value.toLowerCase()}</td>
                   <td><img className="image" src={person.picture.large} /></td>
-                  <td>{person.name.first} {person.name.last}</td>
+                  <td >{person.name.first} {person.name.last}</td>
                   <td>{person.phone}</td>
                   <td>{person.email}</td>
+                  <td>{person.gender}</td>
                   <td>{person.location.city}</td>
                 </tr>
               </tbody>
@@ -100,10 +101,10 @@ class Table extends Component {
 
           )
         })
-
+        
         
 
-        this.setState({ employees: employees });
+        this.setState({ employees: employees })
  
       })
   }
@@ -113,9 +114,11 @@ class Table extends Component {
   render() {
     return (
       <div className="App">
-      <input type="text" placeholder="Enter item to be searched" 
+      <input className="search-box" type="text" placeholder="Filter your search" 
       onChange={this.handleInputChange} />
+      <div className="table-wrapper">
         {this.state.employees}
+        </div>
 
       </div>
     )

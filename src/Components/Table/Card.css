@@ -1,34 +1,27 @@
-.card{
-    box-shadow: 0px 0.2px 6px 0.5px black;
-    margin: 20px;
-    height: 45e0px;
-    border-radius: 10px;
+.mainBody{
+    color: #566787;
+    background: #d3c6c6;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.upper-container{
-    height:100px;
-    background: linear-gradient(to left, #ec9e74, #ff56);
+.table-wrapper{
+    width: 1200px;
+    background: #fff;
+    padding: 20px 30px 5px;
+    margin: 30px auto;
+    box-shadow: 3px 8px 14px rgba(0, 0, 0, 0.7);
 }
-.image-container img{
-    background: white;
-    width: 120px;
-    height: 120px;
-    padding: 5px;
-    border-radius: 50%;
-    transform: translate(10px,45px);
+
+.search-box{
+    width: 50%;
+    
+    margin:0 auto;
+    padding: 15px 0 10px;
+    border-radius: 3px;
+    border: 0.5px;
+    background: rgb(240, 244, 238);
+    transform: translate(406px);
+    border-bottom: 5px solid rgba(163, 165, 167, 0.851);
     
 }
 
-.card-body{
-    transform: translate(10px,45px);
-
-}
-
-.gender{
-    text-transform: capitalize;
-}
-
-.title{
-    font-size: 0.8rem;
-    
-}
